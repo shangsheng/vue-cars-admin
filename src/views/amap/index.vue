@@ -44,7 +44,7 @@ export default {
         // 创建地图
         mapCreate(params){
             this.map = new AMap.Map('amapContainer', {
-                center: [116.404765, 39.918052],
+                center: [133.566516, 34.811628],
                 zoom: this.zoom, //初始化地图层级
             });
             this.map.on("complete", () => {
