@@ -44,7 +44,7 @@ export default {
         // 创建地图
         mapCreate(params){
             this.map = new AMap.Map('amapContainer', {
-                center: [133.566516, 34.811628],
+                center: [113.565912, 34.813508],
                 zoom: this.zoom, //初始化地图层级
             });
             this.map.on("complete", () => {
@@ -55,7 +55,7 @@ export default {
          * 地图加载完成
          */
         mapLoad(){
-            if(this.options.mapLoad) {
+            if(this.options&&this.options.mapLoad) {
                 this.$emit('callback', {
                     function: "mapLoad"
                 })

@@ -107,6 +107,10 @@ export default {
             form_data: {}
         }
     },
+    beforeCreate(){},
+    created(){
+        console.log(this.config)
+    },
     beforeMount(){},
     methods: {
         callbackComponent(params){
@@ -135,6 +139,7 @@ export default {
             }
             this.loading_table = true;
             GetTableData(requestData).then(response => {
+                console.log(response)
                 const data = response.data;
                 // 判断数据是否存在
                 if(data) { this.table_data = data.data }
@@ -149,6 +154,7 @@ export default {
             })
         },
         requestData(params = ""){
+            console.log(params)
             if(params) {
                 // 处理业务逻辑
                 this.table_config.data = params;

@@ -109,7 +109,8 @@ export default {
                 data: {
                     pageSize: 10,
                     pageNumber: 1
-                }
+                },
+                search_form:false
             },
             // 筛选
             form: {
@@ -147,7 +148,7 @@ export default {
             // 过滤筛选
             const filterData = JSON.parse(JSON.stringify(this.form));
             for(let key in filterData) {
-                if(filterData[key]) {
+                if(filterData[key]===true||filterData[key]===false) {
                     requestData[key] = filterData[key];
                 }
             }
@@ -191,5 +192,7 @@ export default {
 
 </script>
 <style lass="scss" scoped>
-
+    .el-cascader{
+        width: 120px;
+    }
 </style>

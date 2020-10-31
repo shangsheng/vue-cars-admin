@@ -76,10 +76,13 @@ export default {
         /** 搜索 */
         search(){
             const searchData = {};
+            console.log(this.form_data)
             // 过滤空数据
             for(let key in this.form_data) {
                 if(this.form_data[key]) {
                     searchData[key] = this.form_data[key]
+                }else if(this.form_data[key] === undefined){
+                    searchData[key] = false
                 }
             }
             /**  组件 */

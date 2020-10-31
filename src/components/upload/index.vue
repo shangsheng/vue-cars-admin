@@ -47,6 +47,7 @@ export default {
 		},
 		// 上传之前
 		beforeAvatarUpload(file) {
+			console.log(file)
 			const isJPG = file.type === "image/jpeg";
 			const isLt2M = file.size / 1024 / 1024 < 2;
 			if (!isJPG) {
